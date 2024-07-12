@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Restaurants<h1>  <%= link_to 'Create Restaurant', new_restaurant_path, class: 'btn btn-primary', data: { turbo_frame: "new_restaurant" }%>
+  <hr>
+  <%= turbo_frame_tag "new_restaurant" %>
+  <div id="restaurants">
+    <%= turbo_frame_tag "restaurants" do%>
+      <%= render @restaurants %>
+    <%end%>
+  </div>
+</div>
